@@ -11,6 +11,8 @@ import OutboxMonitor from "./pages/OutboxMonitor";
 import NotFound from "./pages/NotFound";
 import { AppLayout } from "./components/layout/AppLayout";
 
+import Index from "./pages/Index";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -20,7 +22,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Index />} />
+          <Route path="/login" element={<Login />} />
           <Route element={<AppLayout />}>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/workflows/new" element={<WorkflowBuilder />} />
